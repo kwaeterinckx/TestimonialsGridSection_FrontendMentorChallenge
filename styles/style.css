@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "main"
+        "footer";
+    min-height: 100vh;
+    font-family: var(--ff-text);
+    font-size: var(--fs-text);
+    font-weight: var(--fw-normal);
+    line-height: var(--lh-text);
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+
+/** CUSTOM FOOTER */
+.custom_footer {
+    grid-area: footer;
+    margin-top: auto;
+    padding: 2rem 1rem;
+    background-color: var(--clr-dark);
+}
+
+.custom_footer__github,
+.custom_footer__info {
+    text-align: center;
+    color: var(--clr-light);
+}
+
+.custom_footer__github {
+    margin-bottom: 1rem;
+}
+
+.custom_footer__link {
+    color: var(--clr-yellow);
+    text-decoration: none;
+}
+
+.custom_footer__link:hover,
+.custom_footer__link:focus-visible {
+    text-decoration: underline;
+}
