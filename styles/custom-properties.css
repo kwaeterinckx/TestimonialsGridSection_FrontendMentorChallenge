@@ -1,0 +1,24 @@
+:root {
+    --clr-dark-blackblue: hsl(219, 29%, 14%);
+    --clr-dark-grayblue: hsl(217, 19%, 35%);
+    --clr-dark-grayblue_25: hsla(217, 19%, 35%, .25);
+    --clr-violet-500: hsl(263, 55%, 52%);
+    --clr-violet-200: hsl(264, 82%, 70%);
+    --clr-light-gray: hsl(0, 0%, 81%);
+    --clr-light-grayblue: hsl(210, 46%, 95%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --ff-text: "Barlow Semi Condensed";
+
+    --fs-root: 16px;
+    --fs-title: 20px;
+    --fs-text: 13px;
+    --fs-detail: 11px;
+
+    --fw-semi-bold: 600;
+    --fw-medium: 500;
+
+    --lh-title: normal;
+    --lh-author: 100%;
+    --lh-text: 18px;
+}

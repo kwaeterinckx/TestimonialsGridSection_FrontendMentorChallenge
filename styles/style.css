@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: var(--fs-root);
+}
+
 body {
     display: grid;
     grid-template-rows: 1fr auto;
@@ -16,10 +20,10 @@ body {
     min-height: 100vh;
     font-family: var(--ff-text);
     font-size: var(--fs-text);
-    font-weight: var(--fw-normal);
+    font-weight: var(--fw-medium);
     line-height: var(--lh-text);
-    color: var(--clr-dark);
-    background-color: var(--clr-light);
+    color: var(--clr-dark-grayblue);
+    background-color: var(--clr-light-grayblue);
 }
 
 img {
@@ -27,20 +31,81 @@ img {
     max-width: 100%;
 }
 
+.testimonials {
+    margin-inline: 1.5rem;
+    margin-block: 4.5rem;
+    display: grid;
+    grid-template-areas:
+        "testimonial_1",
+        "testimonial_2",
+        "testimonial_3",
+        "testimonial_4",
+        "testimonial_5";
+    row-gap: 1.5rem;
+    column-gap: 1.75rem;
+}
 
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-inline: 2rem;
+    padding-block: 1.75rem 2rem;
+    background-color: var(--clr-white);
+    border-radius: .5rem;
+    box-shadow: 40px 60px 50px -47px var(--clr-dark-grayblue_25);
+}
+
+.testimonial__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.author {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.author__picture {
+    width: 1.75rem;
+    border-radius: 50%;
+}
+
+.author__name {
+    margin-bottom: .25rem;
+    line-height: var(--lh-author);
+}
+
+.author__info {
+    font-size: var(--fs-detail);
+    line-height: var(--lh-author);
+    opacity: .5;
+}
+
+.testimonial__title {
+    font-size: var(--fs-title);
+    font-weight: var(--fw-semi-bold);
+    line-height: var(--lh-title);
+}
+
+.testimonial__text {
+    opacity: .7;
+}
 
 /** CUSTOM FOOTER */
 .custom_footer {
     grid-area: footer;
     margin-top: auto;
     padding: 2rem 1rem;
-    background-color: var(--clr-dark);
+    background-color: var(--clr-dark-blackblue);
 }
 
 .custom_footer__github,
 .custom_footer__info {
     text-align: center;
-    color: var(--clr-light);
+    color: var(--clr-violet-200);
 }
 
 .custom_footer__github {
@@ -48,7 +113,7 @@ img {
 }
 
 .custom_footer__link {
-    color: var(--clr-yellow);
+    color: var(--clr-light-grayblue);
     text-decoration: none;
 }
 
