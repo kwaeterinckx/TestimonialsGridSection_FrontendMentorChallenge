@@ -32,17 +32,19 @@ img {
 }
 
 .testimonials {
+    place-self: center;
     margin-inline: 1.5rem;
     margin-block: 4.5rem;
     display: grid;
     grid-template-areas:
-        "testimonial_1",
-        "testimonial_2",
-        "testimonial_3",
-        "testimonial_4",
+        "testimonial_1"
+        "testimonial_2"
+        "testimonial_3"
+        "testimonial_4"
         "testimonial_5";
     row-gap: 1.5rem;
     column-gap: 1.75rem;
+    max-width: 1110px;
 }
 
 .testimonial {
@@ -54,6 +56,52 @@ img {
     background-color: var(--clr-white);
     border-radius: .5rem;
     box-shadow: 40px 60px 50px -47px var(--clr-dark-grayblue_25);
+}
+
+.testimonial--1 {
+    grid-area: testimonial_1;
+}
+
+.testimonial--2 {
+    grid-area: testimonial_2;
+}
+
+.testimonial--3 {
+    grid-area: testimonial_3;
+}
+
+.testimonial--4 {
+    grid-area: testimonial_4;
+}
+
+.testimonial--5 {
+    grid-area: testimonial_5;
+}
+
+.testimonial--spotlight {
+    position: relative;
+    isolation: isolate;
+    gap: 2.5rem;
+    background-color: var(--clr-violet-500);
+}
+
+.testimonial--spotlight::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 1.5rem;
+    width: 104px;
+    height: 102px;
+    background-image: url(../images/bg-pattern-quotation.svg);
+}
+
+.testimonial--grayblue {
+    background-color: var(--clr-dark-grayblue);
+}
+
+.testimonial--blackblue {
+    background-color: var(--clr-dark-blackblue);
 }
 
 .testimonial__header {
@@ -73,6 +121,17 @@ img {
     border-radius: 50%;
 }
 
+.testimonial--spotlight .author__picture,
+.testimonial--blackblue .author__picture {
+    border: 2px solid var(--clr-violet-200)
+}
+
+.testimonial--spotlight .author__details,
+.testimonial--grayblue .author__details,
+.testimonial--blackblue .author__details {
+    color: var(--clr-white);
+}
+
 .author__name {
     margin-bottom: .25rem;
     line-height: var(--lh-author);
@@ -90,8 +149,20 @@ img {
     line-height: var(--lh-title);
 }
 
+.testimonial--spotlight .testimonial__title,
+.testimonial--grayblue .testimonial__title,
+.testimonial--blackblue .testimonial__title {
+    color: var(--clr-white);
+}
+
 .testimonial__text {
     opacity: .7;
+}
+
+.testimonial--spotlight .testimonial__text,
+.testimonial--grayblue .testimonial__text,
+.testimonial--blackblue .testimonial__text {
+    color: var(--clr-light-grayblue);
 }
 
 /** CUSTOM FOOTER */

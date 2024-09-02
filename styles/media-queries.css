@@ -1,0 +1,39 @@
+/*- --------------------------------------------------
+/*- >= 600px (Tablet - Portrait)
+/*- -------------------------------------------------- */
+@media (width >=600px) {
+    .testimonials {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "testimonial_1 testimonial_1"
+            "testimonial_2 testimonial_3"
+            "testimonial_4 testimonial_4"
+            "testimonial_5 testimonial_5";
+    }
+
+    .testimonial--spotlight::before {
+        right: 5rem;
+    }
+}
+
+/*- --------------------------------------------------
+/*- >= 900px (Tablet - Landscape)
+/*- -------------------------------------------------- */
+@media (width >=900px) {
+    .testimonials {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "testimonial_1 testimonial_1 testimonial_2 testimonial_5"
+            "testimonial_3 testimonial_4 testimonial_4 testimonial_5";
+    }
+}
+
+/*- --------------------------------------------------
+/*- >= 1200px (Desktop)
+/*- -------------------------------------------------- */
+@media (width >=1200px) {}
+
+/*- --------------------------------------------------
+/*- >= 1800px (Large Desktop)
+/*- -------------------------------------------------- */
+@media (width >=1800px) {}
