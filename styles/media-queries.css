@@ -11,6 +11,10 @@
             "testimonial_5 testimonial_5";
     }
 
+    .testimonial--spotlight {
+        gap: 1rem;
+    }
+
     .testimonial--spotlight::before {
         right: 5rem;
     }
